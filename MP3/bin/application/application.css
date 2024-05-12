@@ -1,0 +1,134 @@
+#songProgressBar {
+    -fx-pref-width: 300;
+    -fx-pref-height: 10;
+    -fx-background-radius: 20;
+    -fx-padding: 0;
+}
+
+#songProgressBar .bar {
+    -fx-background-color: white;
+    -fx-background-insets: 0;
+}
+
+#songProgressBar .track {
+    -fx-background-color: gray;
+    -fx-background-insets: 4;
+}
+#songProgressBar .bar .track {
+    -fx-background-color: transparent; /* İlerleme çubuğu arka plan rengi */
+}
+
+#songProgressBar .bar .thumb {
+    -fx-background-color: white; /* İlerleme noktası rengi */
+    -fx-background-radius: 5px; /* Yuvarlak köşeler */
+}
+#songProgressBar .bar {
+    -fx-background-insets: 0; /* İlerleme çubuğu iç kenar boşluğunu sıfırlar */
+    -fx-border-radius: 20px; /* İlerleme çubuğunun köşelerini yuvarlar */
+}
+
+#songProgressBar .bar .thumb {
+    -fx-background-radius: 0; /* İlerleme noktasının köşelerini sıfırlar */
+    -fx-padding: 0; /* İlerleme noktasının iç boşluğunu sıfırlar */
+    -fx-background-insets: 0; /* İlerleme noktasının iç kenar boşluğunu sıfırlar */
+}
+#pane {
+    -fx-background-color: #f0f0f0; /* Arka plan rengi */
+    -fx-padding: 20px; /* Kenar boşlukları */
+    -fx-border-radius: 10px; /* Kenar yuvarlaklığı */
+    -fx-border-color: #ccc; /* Kenar rengi */
+    -fx-border-width: 2px; /* Kenar kalınlığı */
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.8) , 20, 0.8 , 5 , 5 ); /* Koyu ve belirgin bir gölge */ 
+}
+/* ImageView stilini güncelleme */
+#kapak_resmi {
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.5) , 10, 0.5 , 2 , 2 ); /* Gölge efekti */
+    -fx-border-radius: 10px; /* Köşe yuvarlaklığı */
+    -fx-border-color: #fff; /* Kenar rengi - Beyaz */
+    -fx-border-width: 2px; /* Kenar kalınlığı */
+}
+/* Butonlar üzerinde stil güncellemesi */
+
+#pauseButton {
+    -fx-text-fill: #fff; /* Metin rengi - Beyaz */
+    -fx-background-radius: 10px; /* Köşe yuvarlaklığı */
+    -fx-border-color: transparent; /* Kenar rengi */
+    -fx-font-weight: bold; /* Kalın yazı */
+    -fx-padding: 10px 20px; /* Buton iç boşluğu */
+    -fx-font-size: 14px; /* Yazı boyutu */
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.5) , 10, 0.5 , 2 , 2 ); /* Gölge efekti */
+}
+
+#playButton {
+    -fx-text-fill: #fff; /* Metin rengi - Beyaz */
+    -fx-background-radius: 10px; /* Köşe yuvarlaklığı */
+    -fx-border-color: transparent; /* Kenar rengi */
+    -fx-font-weight: bold; /* Kalın yazı */
+    -fx-padding: 10px 20px; /* Buton iç boşluğu */
+    -fx-font-size: 14px; /* Yazı boyutu */
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.5) , 10, 0.5 , 2 , 2 ); /* Gölge efekti */
+}
+
+#previousButton {
+	-fx-text-fill: #fff; /* Metin rengi - Beyaz */
+    -fx-background-radius: 10px; /* Köşe yuvarlaklığı */
+    -fx-border-color: transparent; /* Kenar rengi */
+    -fx-font-weight: bold; /* Kalın yazı */
+    -fx-padding: 12px 24px; /* Buton iç boşluğu */
+    -fx-font-size: 14px; /* Yazı boyutu */
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.5) , 10, 0.5 , 2 , 2 ); /* Gölge efekti */
+}
+
+#nextButton {
+    -fx-text-fill: #fff; /* Metin rengi - Beyaz */
+    -fx-background-radius: 10px; /* Köşe yuvarlaklığı */
+    -fx-border-color: transparent; /* Kenar rengi */
+    -fx-font-weight: bold; /* Kalın yazı */
+    -fx-padding: 12px 24px; /* Buton iç boşluğu */
+    -fx-font-size: 14px; /* Yazı boyutu */
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.5) , 10, 0.5 , 2 , 2 ); /* Gölge efekti */
+}
+
+/* volumeSlider stil güncellemesi */
+#volumeSlider {
+    -fx-background-color: transparent; /* Arka plan rengi - Şeffaf */
+}
+
+#volumeSlider .thumb {
+    -fx-background-color: white; /* Başlık rengi - Spotify'daki yeşil renk */
+    -fx-background-radius: 10px; /* Başlık yuvarlaklığı */
+    -fx-border-color: transparent; /* Kenar rengi */
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.5) , 10, 0.5 , 2 , 2 ); /* Gölge efekti */
+}
+
+#volumeSlider .track {
+    -fx-background-color: white; /* İlerleme çizgisi rengi - Spotify'daki yeşil renk */
+    -fx-background-radius: 10px; /* İlerleme çizgisi yuvarlaklığı */
+}
+
+#volumeSlider .track-background {
+    -fx-background-color: #000; /* Arkaplan rengi - Siyah */
+    -fx-background-radius: 10px; /* Arkaplan yuvarlaklığı */
+}
+#begendiklerim_ListView {
+    -fx-background-color: black; /* Arka plan rengi */
+    -fx-font-size: 13px; /* Metin boyutu */
+    -fx-pref-width: 200px; /* Genişlik */
+    -fx-pref-height: 160px; /* Yükseklik */
+}
+
+#begendiklerim_ListView .list-cell {
+    -fx-text-fill: white; /* Yazı rengi */
+    -fx-background-color: black; 
+    -fx-background-color: transparent; /* Satır kutucuklarının arkaplan rengini saydam yapar */
+    -fx-text-fill: white; /* Satır kutucuklarının metin rengini beyaz yapar */
+    -fx-border-color: white; /* Satır kutucukları arasındaki çizgi rengi */
+    -fx-border-width: 0 0 1 0; /* Satır kutucukları arasındaki çizgi kalınlığı */
+}
+#begenButton {
+    -fx-text-fill: #fff; /* Metin rengi - Beyaz */
+    -fx-background-radius: 25px; /* Köşe yuvarlaklığı */
+    -fx-border-color: transparent; /* Kenar rengi */
+    -fx-font-weight: bold; /* Kalın yazı */
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.5) , 10, 0.5 , 2 , 2 ); /* Gölge efekti */ 
+}

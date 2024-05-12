@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="350.0" style="-fx-background-color: #262626;" styleClass="pane" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <ProgressBar fx:id="songProgressBar" layoutX="25.0" layoutY="395.0" onDragDetected="#ilerleme_cubugu_tiklama" onMouseClicked="#ilerleme_cubugu_tiklama" prefHeight="18.0" prefWidth="300.0" progress="0.0">
+         <effect>
+            <Glow />
+         </effect>
+      </ProgressBar>
+      <Button fx:id="previousButton" layoutX="64.8" layoutY="444.8" mnemonicParsing="false" onAction="#onceki_muzik" prefHeight="40.0" prefWidth="44.0" style="-fx-background-radius: 100; -fx-background-color: #262626;" textAlignment="CENTER" AnchorPane.bottomAnchor="175.2" AnchorPane.leftAnchor="65.0" AnchorPane.rightAnchor="241.0" AnchorPane.topAnchor="459.2">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0">
+               <image>
+                  <Image url="@../../iconlar/Previous.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <ComboBox fx:id="speedBox" layoutX="236.0" layoutY="559.0" onAction="#hizi_degistir" prefHeight="30.0" prefWidth="30.0" style="-fx-background-radius: 100; -fx-background-color: white;" />
+      <Slider fx:id="volumeSlider" layoutX="323.0" layoutY="59.0" max="100.0" onDragDetected="#ses_seviyesi_ekle" orientation="VERTICAL" prefHeight="176.0" prefWidth="21.0" style="-fx-background-radius: 100;" value="50.0" />
+      <Button fx:id="nextButton" layoutX="244.0" layoutY="459.2" mnemonicParsing="false" onAction="#sonraki_muzik" prefHeight="40.0" prefWidth="30.0" style="-fx-background-radius: 100; -fx-background-color: #262626;" AnchorPane.bottomAnchor="175.0" AnchorPane.leftAnchor="244.0" AnchorPane.rightAnchor="62.0" AnchorPane.topAnchor="459.0">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0">
+               <image>
+                  <Image url="@../../iconlar/Next.png" />
+               </image>
+               <effect>
+                  <Blend />
+               </effect>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label fx:id="sanatci_label" layoutX="28.0" layoutY="360.0" prefHeight="18.0" prefWidth="118.0" style="-fx-background-radius: 100;" text="Cat Stevens" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="caliniyor_label" alignment="CENTER" layoutX="51.0" layoutY="8.0" prefHeight="40.0" prefWidth="238.0" style="-fx-background-radius: 100;" text="Sanatçıdan Çalınıyor" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="muzik_label" alignment="CENTER" layoutX="-1.0" layoutY="316.0" prefHeight="23.0" prefWidth="350.0" style="-fx-background-radius: 100;" text="Cat Stevens - Wild World" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="150.0" layoutY="427.0" mnemonicParsing="false" onAction="#muzigi_baslat_durdur" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 180; -fx-background-color: ffffff;">
+         <graphic>
+            <ImageView fx:id="button_image" fitHeight="20.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+         </graphic>
+      </Button>
+      <ImageView fitHeight="32.0" fitWidth="34.0" layoutX="163.0" layoutY="500.0" visible="false">
+         <image>
+            <Image url="@../../iconlar/play.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="kapak_resmi" fitHeight="249.0" fitWidth="283.0" layoutX="50.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../kapaklar/Cat%20Stevens%20-%20Wild%20World.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="32.0" fitWidth="42.0" layoutX="42.0" layoutY="459.0" visible="false">
+         <image>
+            <Image url="@../../iconlar/pause.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="kalan_sure_label" layoutX="25.0" layoutY="410.0" text="Label">
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+      <Label fx:id="toplam_sure_label" layoutX="299.0" layoutY="410.0" text="Label">
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+      <Button fx:id="begendiklerim_buton" layoutX="25.0" layoutY="562.0" mnemonicParsing="false" onMouseEntered="#popup_goster" style="-fx-background-color: #262626; -fx-background-radius: 100;" text="Beğenilen Müzikler" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="begenButton" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="272.0" layoutY="345.0" minHeight="30.0" minWidth="35.0" mnemonicParsing="false" onAction="#muzik_begenme_durumunu_kontrol_et" prefHeight="33.0" prefWidth="30.0" style="-fx-background-color: white; -fx-background-radius: 100;" textAlignment="CENTER">
+         <font>
+            <Font size="1.0" />
+         </font>
+         <graphic>
+            <ImageView fx:id="begenme_image" fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../iconlar/Like.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <ListView fx:id="begendiklerim_ListView" layoutX="37.0" layoutY="374.0" prefHeight="170.0" prefWidth="99.0" visible="false" />
+      <ImageView fitHeight="18.0" fitWidth="22.0" layoutX="244.0" layoutY="565.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../iconlar/clock.png" />
+         </image></ImageView>
+      <ImageView fx:id="ses_image" fitHeight="18.0" fitWidth="23.0" layoutX="324.0" layoutY="240.0" onMouseClicked="#sesImageTiklandi" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../iconlar/Volume.png" />
+         </image></ImageView>
+      <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../iconlar/doluLike.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="40.0" layoutX="99.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../iconlar/Like.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
